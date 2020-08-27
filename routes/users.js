@@ -26,7 +26,7 @@ router.post('/register', async ({
   const newUser = new User(body);
   await newUser.save((err) => {
     if (err) return next(err);
-    return res.redirect('getAll');
+    return res.redirect('login.html');
   });
 });
 
